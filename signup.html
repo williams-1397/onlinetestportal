@@ -5,38 +5,48 @@
 <head>
     <meta charset="utf-8">
     <title>SignUp</title>
-</head>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@600;800&display=swap" rel="stylesheet">
 
-<body>
-    <center>
-        <header role="banner">
-            <h1>Online Test Portal</h1>
-        </header>
+    <body>
+        <!-- Header section-->
+        <div class="header">
+            <header> Online Test Portal </header>
+        </div>
 
-        <nav>
-            <ul>
+        <!--NavigationBar section-->
+        <div class="nav">
+            <nav>
                 <a href="index.html">Home</a>
                 <a href="testpage.html">Online Test</a>
                 <a href="about.html">About Us</a>
                 <a href="contacts.html">Contacts</a>
                 <a href="help.html">Help</a>
-                <a href="signin.html">SignIn</a>
-            </ul>
-        </nav>
+                <a href="signin.html">Sign In</a>
+                <a href="welcomestudent.html">Student welcomepage</a>
+                <a href="welcomeexaminor.html">Examinor welcomepage</a>
+            </nav>
+        </div>
 
         <article>
             <section>
-                <h2>Sign Up Form</h2>
-                <form>
-                    <label for="email">Email:</label><br>
-                    <input type="email" id="email" name="email"><br>
-                    <label for="pass">Password:</label><br>
-                    <input type="password" id="pass" name="pass"><br>
-                    <label for="pass">Confirm Password:</label><br>
-                    <input type="password" id="cpass" name="cpass"><br>
-                    <input type="submit" name="submit" value="Submit">
-                    <input type="reset" name="reset" value="reset">
-                </form>
+                <div class="artical ">
+                    <h2>Sign Up Form</h2>
+                    <div class="form">
+                        <form>
+                            <label for="email">Email:</label><br>
+                            <input type="email" id="email" name="email"><br>
+                            <label for="pass">Password:</label><br>
+                            <input type="password" id="pass" name="pass"><br>
+                            <label for="pass">Confirm Password:</label><br>
+                            <input type="password" id="cpass" name="cpass"><br>
+                            <div class="form_btn">
+                                <input type="submit" name="submit" value="Submit">
+                                <input type="reset" name="reset" value="Reset">
+                            </div>
+                    </div>
+                    </form>
+                </div>
             </section>
         </article>
 
@@ -44,10 +54,13 @@
             <p></p>
         </aside>
 
-        <footer>
-            <p>Created by Online Test Portal</p>
-        </footer>
-    </center>
-</body>
+        <!--Footer Section-->
+        <div class="footer ">
+            <footer>
+                <p>Website Created by
+                    <a href="contacts.html ">Brijesh chudasama</p>
+      </footer>
+   </div>
+    </body>
 
 </html>
