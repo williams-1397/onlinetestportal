@@ -4,17 +4,42 @@
 
 <head>
     <meta charset="utf-8">
-    <title>About Us</title>
-    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@600;800&display=swap" rel="stylesheet">
-    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!--<link rel="stylesheet" type="text/css" href="./css/style.css">-->
+    <title>Online Test Portal</title>
+    </script>
+    <style>
+        /* Make the image fully responsive */
+        
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .bg-4 {
+            background-color: #2f2f2f;
+            /* Black Gray */
+            color: #fff;
+        }
+        
+        .container-fluid {
+            padding-top: 40px;
+            padding-bottom: 30px;
+        }
+        
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -25,21 +50,18 @@
     </div>-->
 
     <!--NavigationBar section-->
-    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
-        <div class="container-fluid">
-            <div class="header">
-                <header> Online Test Portal </header>
-            </div>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <h3>ONLINE TEST PORTAL</h3>
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-			<span class = "navbar-toggler-icon"></span>
-	</button>
+            <span class = "navbar-toggler-icon"></span>
+        </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="testpage.html">Online Test</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About Us</a>
@@ -51,7 +73,7 @@
                         <a class="nav-link" href="help.html">Help</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="signin.html">Sign In</a>
+                        <a class="nav-link" data-toggle="modal" data-target="#myModal">Sign In</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="welcomestudent.html">Student welcomepage</a>
@@ -61,37 +83,86 @@
                     </li>
                 </ul>
             </div>
+        </div>
     </nav>
 
-    <article>
-        <section>
-            <div class="artical ">
-                <div class="h4 ">
-                    <h4>Help!</h4>
-                </div>
-                <div class="para ">
-                    <p>Email us for queries regarding project.
-                    </p>
-                    <p>
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
 
-                        Email : brijesh.chudasama2012@gmail.com
-                    </p>
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container">
+                        <h2>Sign-In Form</h2>
+                        <form action="/action_page.php">
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Password:</label>
+                                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+                            </div>
+                            <div class="form-group form-check">
+                                <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox" name="remember"> Remember me
+                            </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="reset" class="btn btn-dark">Reset</button>
+                        </form>
+                        Don't have account? To register <a href="#subtn" class="btn btn-primary" data-toggle="collapse">Click Here!</a>
+
+                        <div id="subtn" class="collapse">
+                            <h2>Sign-Up Form</h2>
+                            <form action="/action_page.php">
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd">Password:</label>
+                                    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd">Confirm Password:</label>
+                                    <input type="cpassword" class="form-control" id="cpwd" placeholder="Enter Confirm password" name="cpswd">
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="reset" class="btn btn-dark">Reset</button>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
-        </section>
-    </article>
+        </div>
+    </div>
 
-    <aside>
-        <p></p>
-    </aside>
+    <div class="jumbotron jumbotron-fluid display-4">
+        <div class="container">
+            Help
+        </div>
+    </div>
+
+    <div class="container">
+        <p>Email us for queries regarding project.</p>
+        <p>Email : brijesh.chudasama2012@gmail.com</p>
+    </div>
+
 
     <!--Footer Section-->
-    <div class="footer ">
-        <footer>
-            <p>Website Created by
-                <a href="contacts.html ">Brijesh chudasama</p>
-      </footer>
-   </div>
+    <div class="footer">
+        <footer class="container-fluid bg-4 text-center sticky-bottom ">
+            <h6>Bootstrap Theme Made By <a href="contacts.html " style="text-decoration: none; ">Brijesh chudasama</a>
+            </h6>
+        </footer>
+    </div>
 </body>
 
 </html>
